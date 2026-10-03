@@ -1,1 +1,1039 @@
-Vũ Văn Thống | QA & Food Safety Specialist
+<!DOCTYPE html>
+<html lang="vi" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vũ Văn Thống | Food QA Specialist Portfolio</title>
+  <!-- Google Fonts: Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Font Awesome CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <!-- AOS Animation CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+          },
+          colors: {
+            brand: {
+              50: '#ecfdf5',
+              100: '#d1fae5',
+              200: '#a7f3d0',
+              500: '#10b981',
+              600: '#059669',
+              700: '#047857',
+              800: '#065f46',
+              900: '#064e3b',
+            }
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    /* Custom scrollbar and glassmorphism utilities */
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #0f172a;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #059669;
+      border-radius: 9999px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #10b981;
+    }
+    .glass-nav {
+      background: rgba(15, 23, 42, 0.85);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+    }
+    .glass-card {
+      background: rgba(30, 41, 59, 0.7);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+    .glass-card:hover {
+      border-color: rgba(16, 185, 129, 0.4);
+    }
+    .typing-cursor::after {
+      content: '|';
+      animation: blink 1s infinite;
+    }
+    @keyframes blink {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0; }
+    }
+  </style>
+</head>
+<body class="bg-slate-950 text-slate-100 font-sans antialiased selection:bg-brand-500 selection:text-white relative overflow-x-hidden">
+
+  <!-- Top Navigation Header -->
+  <header class="fixed top-0 left-0 right-0 z-50 glass-nav border-b border-slate-800 transition-all duration-300" id="navbar">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      <!-- Logo / Name Badge -->
+      <a href="#hero" class="flex items-center gap-3 group focus:outline-none">
+        <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-brand-600 to-emerald-400 flex items-center justify-center text-white shadow-lg shadow-brand-500/20 group-hover:scale-105 transition-transform duration-300">
+          <i class="fa-solid fa-shield-halved text-lg"></i>
+        </div>
+        <div>
+          <span class="text-lg font-bold tracking-tight text-white group-hover:text-emerald-400 transition-colors">VŨ VĂN THỐNG</span>
+          <span class="block text-xs font-medium text-emerald-400 tracking-wider uppercase">Food QA Specialist</span>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation Links -->
+      <nav class="hidden md:flex items-center space-x-1 lg:space-x-2">
+        <a href="#hero" class="px-3 py-2 text-sm font-medium text-slate-300 hover:text-emerald-400 rounded-lg transition-colors hover:bg-slate-800/60">Trang chủ</a>
+        <a href="#about" class="px-3 py-2 text-sm font-medium text-slate-300 hover:text-emerald-400 rounded-lg transition-colors hover:bg-slate-800/60">Giới thiệu & Mục tiêu</a>
+        <a href="#skills" class="px-3 py-2 text-sm font-medium text-slate-300 hover:text-emerald-400 rounded-lg transition-colors hover:bg-slate-800/60">Kỹ năng</a>
+        <a href="#projects" class="px-3 py-2 text-sm font-medium text-slate-300 hover:text-emerald-400 rounded-lg transition-colors hover:bg-slate-800/60">Dự án & Thành tựu</a>
+        <a href="#testimonials" class="px-3 py-2 text-sm font-medium text-slate-300 hover:text-emerald-400 rounded-lg transition-colors hover:bg-slate-800/60">Đánh giá</a>
+        <a href="#contact" class="ml-3 px-4 py-2 text-sm font-semibold text-white bg-gradient-to-r from-brand-600 to-emerald-500 hover:from-brand-500 hover:to-emerald-400 rounded-xl shadow-md shadow-brand-600/25 transition-all duration-300 hover:shadow-brand-500/40 transform hover:-translate-y-0.5">
+          <i class="fa-regular fa-paper-plane mr-1.5"></i> Kết nối ngay
+        </a>
+      </nav>
+
+      <!-- Mobile Menu Button -->
+      <div class="flex md:hidden">
+        <button id="mobile-menu-btn" type="button" class="p-2.5 rounded-xl bg-slate-800/80 text-slate-300 hover:text-white focus:outline-none focus:ring-2 focus:ring-emerald-400" aria-label="Toggle menu">
+          <i class="fa-solid fa-bars text-xl" id="menu-icon"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Dropdown Menu -->
+    <div id="mobile-menu" class="hidden md:hidden border-b border-slate-800 bg-slate-900/95 backdrop-blur-xl px-4 pt-2 pb-6 space-y-2">
+      <a href="#hero" class="mobile-nav-link block px-4 py-2.5 rounded-xl text-base font-medium text-slate-200 hover:bg-slate-800 hover:text-emerald-400">Trang chủ</a>
+      <a href="#about" class="mobile-nav-link block px-4 py-2.5 rounded-xl text-base font-medium text-slate-200 hover:bg-slate-800 hover:text-emerald-400">Giới thiệu & Mục tiêu</a>
+      <a href="#skills" class="mobile-nav-link block px-4 py-2.5 rounded-xl text-base font-medium text-slate-200 hover:bg-slate-800 hover:text-emerald-400">Kỹ năng chuyên môn</a>
+      <a href="#projects" class="mobile-nav-link block px-4 py-2.5 rounded-xl text-base font-medium text-slate-200 hover:bg-slate-800 hover:text-emerald-400">Dự án & Thành tựu</a>
+      <a href="#testimonials" class="mobile-nav-link block px-4 py-2.5 rounded-xl text-base font-medium text-slate-200 hover:bg-slate-800 hover:text-emerald-400">Đánh giá</a>
+      <a href="#contact" class="mobile-nav-link block px-4 py-2.5 rounded-xl text-base font-semibold text-center text-white bg-brand-600 hover:bg-brand-500">
+        <i class="fa-regular fa-paper-plane mr-2"></i> Liên hệ trực tiếp
+      </a>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="hero" class="relative min-h-screen flex items-center justify-center pt-24 pb-16 overflow-hidden">
+    <!-- Ambient Gradient Blobs -->
+    <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 sm:w-[550px] h-96 sm:h-[550px] bg-emerald-600/15 rounded-full blur-3xl pointer-events-none -z-10"></div>
+    <div class="absolute bottom-10 right-10 w-72 h-72 bg-teal-500/10 rounded-full blur-2xl pointer-events-none -z-10"></div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+        
+        <!-- Left Hero Content -->
+        <div class="lg:col-span-7 text-center lg:text-left" data-aos="fade-up" data-aos-duration="900">
+          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-xs sm:text-sm font-medium mb-6">
+            <span class="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
+            <span>Sẵn sàng tiếp nhận cơ hội nghề nghiệp QA / Quản lý chất lượng</span>
+          </div>
+
+          <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white tracking-tight leading-tight sm:leading-none mb-4">
+            Xin chào, tôi là <br class="hidden sm:inline">
+            <span class="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 via-teal-300 to-cyan-400">Vũ Văn Thống</span>
+          </h1>
+
+          <!-- Dynamic Typing Text -->
+          <div class="h-12 sm:h-14 flex items-center justify-center lg:justify-start text-xl sm:text-2xl font-semibold text-slate-300 mb-6">
+            <span class="mr-2 text-slate-400">Chuyên môn:</span>
+            <span id="typing-text" class="text-emerald-400 typing-cursor"></span>
+          </div>
+
+          <p class="text-slate-400 text-base sm:text-lg max-w-2xl mx-auto lg:mx-0 leading-relaxed mb-8">
+            Chuyên viên Đảm bảo Chất lượng với năng lực kiểm soát tuân thủ tiêu chuẩn an toàn thực phẩm chuỗi F&B và hệ sinh thái tiêu chuẩn quốc tế HACCP, ISO 22000, FSSC 22000. Tiên phong kết hợp số hóa và AI để tối ưu hóa quy trình kiểm toán, giảm thiểu rủi ro vận hành.
+          </p>
+
+          <!-- Action Buttons -->
+          <div class="flex flex-wrap items-center justify-center lg:justify-start gap-4">
+            <a href="#projects" class="px-6 py-3.5 rounded-xl bg-gradient-to-r from-brand-600 to-emerald-500 hover:from-brand-500 hover:to-emerald-400 text-white font-semibold shadow-lg shadow-brand-600/30 transition-all duration-300 transform hover:-translate-y-0.5 flex items-center gap-2">
+              <i class="fa-solid fa-list-check"></i> Xem dự án tiêu biểu
+            </a>
+            <a href="#contact" class="px-6 py-3.5 rounded-xl bg-slate-800/90 hover:bg-slate-700/80 border border-slate-700 text-slate-200 font-semibold transition-all duration-300 flex items-center gap-2">
+              <i class="fa-regular fa-envelope"></i> Liên hệ hợp tác
+            </a>
+          </div>
+
+          <!-- Quick Metrics Bar -->
+          <div class="mt-12 pt-8 border-t border-slate-800/80 grid grid-cols-3 gap-4 text-center lg:text-left">
+            <div>
+              <p class="text-2xl sm:text-3xl font-extrabold text-white">100%</p>
+              <p class="text-xs sm:text-sm text-slate-400 mt-1">Tuân thủ pháp chế & TCCS</p>
+            </div>
+            <div>
+              <p class="text-2xl sm:text-3xl font-extrabold text-emerald-400">-35%</p>
+              <p class="text-xs sm:text-sm text-slate-400 mt-1">Lỗi Critical Audit chuỗi</p>
+            </div>
+            <div>
+              <p class="text-2xl sm:text-3xl font-extrabold text-white">94.5%</p>
+              <p class="text-xs sm:text-sm text-slate-400 mt-1">Điểm Audit trung bình</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Hero Visual Card -->
+        <div class="lg:col-span-5 flex justify-center" data-aos="fade-left" data-aos-duration="1000">
+          <div class="relative w-full max-w-md">
+            <!-- Decorative Border Gradient -->
+            <div class="absolute -inset-1 rounded-3xl bg-gradient-to-tr from-brand-600 via-teal-500 to-emerald-400 opacity-30 blur-lg transition duration-500 group-hover:opacity-60"></div>
+            
+            <div class="relative rounded-3xl bg-slate-900 border border-slate-800 p-6 sm:p-8 shadow-2xl">
+              <!-- Profile Avatar Header -->
+              <div class="flex items-center gap-4 pb-6 border-b border-slate-800">
+                <div class="relative">
+                  <div class="w-20 h-20 rounded-2xl bg-gradient-to-tr from-slate-800 to-slate-700 p-1 border-2 border-emerald-500/50 shadow-inner">
+                    <div class="w-full h-full rounded-xl bg-slate-950 flex items-center justify-center text-3xl font-bold text-emerald-400">
+                      VT
+                    </div>
+                  </div>
+                  <span class="absolute -bottom-1 -right-1 w-5 h-5 bg-emerald-500 border-2 border-slate-900 rounded-full flex items-center justify-center text-[10px] text-white">
+                    <i class="fa-solid fa-check"></i>
+                  </span>
+                </div>
+                <div>
+                  <h3 class="text-xl font-bold text-white">Vũ Văn Thống</h3>
+                  <p class="text-xs text-emerald-400 font-medium">HACCP & ISO 22000 Auditor</p>
+                  <p class="text-xs text-slate-400 mt-1 flex items-center gap-1.5">
+                    <i class="fa-solid fa-location-dot text-rose-400"></i> Hà Nội, Việt Nam
+                  </p>
+                </div>
+              </div>
+
+              <!-- Key Highlights in Badge Cards -->
+              <div class="py-6 space-y-3">
+                <div class="flex items-center justify-between p-3 rounded-xl bg-slate-800/50 border border-slate-700/50">
+                  <span class="text-xs sm:text-sm text-slate-300 flex items-center gap-2">
+                    <i class="fa-solid fa-microscope text-emerald-400"></i> Kiểm soát Vi sinh & QCVN
+                  </span>
+                  <span class="text-xs font-semibold px-2 py-0.5 rounded-full bg-emerald-500/20 text-emerald-300">Chuẩn hóa</span>
+                </div>
+
+                <div class="flex items-center justify-between p-3 rounded-xl bg-slate-800/50 border border-slate-700/50">
+                  <span class="text-xs sm:text-sm text-slate-300 flex items-center gap-2">
+                    <i class="fa-solid fa-file-shield text-teal-400"></i> Pháp chế NĐ 15 & TCCS
+                  </span>
+                  <span class="text-xs font-semibold px-2 py-0.5 rounded-full bg-teal-500/20 text-teal-300">Tuân thủ 100%</span>
+                </div>
+
+                <div class="flex items-center justify-between p-3 rounded-xl bg-slate-800/50 border border-slate-700/50">
+                  <span class="text-xs sm:text-sm text-slate-300 flex items-center gap-2">
+                    <i class="fa-solid fa-bolt text-yellow-400"></i> Số hóa báo cáo kiểm toán AI
+                  </span>
+                  <span class="text-xs font-semibold px-2 py-0.5 rounded-full bg-yellow-500/20 text-yellow-300">Tiết kiệm 5h/tuần</span>
+                </div>
+              </div>
+
+              <!-- Quick Contact Links -->
+              <div class="pt-4 border-t border-slate-800 flex items-center justify-between">
+                <span class="text-xs text-slate-400">Liên kết nghề nghiệp:</span>
+                <div class="flex items-center gap-2.5">
+                  <a href="#contact" class="w-9 h-9 rounded-lg bg-slate-800 hover:bg-emerald-600 text-slate-300 hover:text-white flex items-center justify-center transition-colors" title="Email">
+                    <i class="fa-solid fa-envelope text-sm"></i>
+                  </a>
+                  <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="w-9 h-9 rounded-lg bg-slate-800 hover:bg-blue-600 text-slate-300 hover:text-white flex items-center justify-center transition-colors" title="LinkedIn">
+                    <i class="fa-brands fa-linkedin-in text-sm"></i>
+                  </a>
+                  <button onclick="copyEmailToClipboard()" class="w-9 h-9 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-300 hover:text-emerald-400 flex items-center justify-center transition-colors" title="Sao chép Email">
+                    <i class="fa-regular fa-copy text-sm"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- About & Objectives Section -->
+  <section id="about" class="py-20 bg-slate-900/60 border-y border-slate-800 relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Section Header -->
+      <div class="text-center max-w-3xl mx-auto mb-16" data-aos="fade-up">
+        <span class="px-3.5 py-1 rounded-full text-xs font-semibold bg-emerald-500/10 text-emerald-400 uppercase tracking-wider">Hồ sơ năng lực</span>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-white mt-3 mb-4">Về bản thân & Định hướng nghề nghiệp</h2>
+        <div class="w-16 h-1 bg-emerald-500 mx-auto rounded-full"></div>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+        
+        <!-- Left: Overview Profile -->
+        <div class="lg:col-span-6 glass-card p-8 rounded-3xl" data-aos="fade-right">
+          <div class="flex items-center gap-3 mb-6 text-emerald-400">
+            <i class="fa-solid fa-user-tie text-2xl"></i>
+            <h3 class="text-xl font-bold text-white">Triết lý nghề nghiệp QA</h3>
+          </div>
+          <p class="text-slate-300 leading-relaxed mb-6">
+            Trong ngành thực phẩm và F&B, kiểm soát chất lượng không đơn thuần là việc <strong class="text-emerald-300 font-semibold">"bắt lỗi tại chỗ"</strong>, mà là chiến lược thiết lập rào cản ngăn chặn rủi ro từ gốc rễ. Tôi tập trung đồng hành cùng khối vận hành thông qua tài liệu hóa chuẩn mực, đào tạo trực quan và ứng dụng công nghệ để biến an toàn thực phẩm thành ý thức tự giác của mỗi nhân viên.
+          </p>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-4 border-t border-slate-800">
+            <div class="p-4 rounded-2xl bg-slate-900/80 border border-slate-800">
+              <span class="text-xs text-slate-400 uppercase font-semibold">Bằng cấp chuyên ngành</span>
+              <p class="text-white font-semibold mt-1">Cử nhân Công nghệ Thực phẩm</p>
+              <p class="text-xs text-emerald-400 mt-0.5">Xếp loại: Khá / Giỏi</p>
+            </div>
+            <div class="p-4 rounded-2xl bg-slate-900/80 border border-slate-800">
+              <span class="text-xs text-slate-400 uppercase font-semibold">Khu vực công tác</span>
+              <p class="text-white font-semibold mt-1">Hà Nội & Miền Bắc</p>
+              <p class="text-xs text-slate-400 mt-0.5">Sẵn sàng công tác chuỗi</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Career Goals (Short & Long Term) -->
+        <div class="lg:col-span-6 space-y-6" data-aos="fade-left">
+          
+          <!-- Short-term Goal -->
+          <div class="glass-card p-6 rounded-3xl relative overflow-hidden border-l-4 border-l-emerald-500">
+            <div class="flex items-center gap-3 mb-3">
+              <div class="w-10 h-10 rounded-xl bg-emerald-500/10 text-emerald-400 flex items-center justify-center">
+                <i class="fa-solid fa-flag-checkered text-lg"></i>
+              </div>
+              <div>
+                <h4 class="text-lg font-bold text-white">Mục tiêu ngắn hạn (1 – 2 năm)</h4>
+                <span class="text-xs text-emerald-400 font-medium">Senior QA Specialist / Giám sát QA Chuỗi</span>
+              </div>
+            </div>
+            <p class="text-slate-300 text-sm leading-relaxed">
+              Trực tiếp dẫn dắt các chiến dịch kiểm toán tuân thủ định kỳ cho mạng lưới điểm bán F&B, hoàn thiện 100% hệ thống quy trình kiểm soát vi sinh và tối ưu hóa danh mục kiểm nghiệm định kỳ theo QCVN với chi phí tinh gọn nhất.
+            </p>
+          </div>
+
+          <!-- Long-term Goal -->
+          <div class="glass-card p-6 rounded-3xl relative overflow-hidden border-l-4 border-l-teal-500">
+            <div class="flex items-center gap-3 mb-3">
+              <div class="w-10 h-10 rounded-xl bg-teal-500/10 text-teal-400 flex items-center justify-center">
+                <i class="fa-solid fa-chart-line text-lg"></i>
+              </div>
+              <div>
+                <h4 class="text-lg font-bold text-white">Mục tiêu dài hạn (3 – 5 năm)</h4>
+                <span class="text-xs text-teal-400 font-medium">Food QA Manager (Trưởng phòng Quản lý Chất lượng)</span>
+              </div>
+            </div>
+            <p class="text-slate-300 text-sm leading-relaxed">
+              Xây dựng hệ sinh thái giám sát an toàn thực phẩm tự động hóa đa điểm chạm; chuẩn bị và dẫn dắt doanh nghiệp đạt các chứng chỉ quốc tế cấp cao như BRCGS / FSSC 22000 Version 6, kiến tạo văn hóa chất lượng bền vững cho tổ chức.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Professional Skills Section -->
+  <section id="skills" class="py-20 relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Section Header -->
+      <div class="text-center max-w-3xl mx-auto mb-16" data-aos="fade-up">
+        <span class="px-3.5 py-1 rounded-full text-xs font-semibold bg-emerald-500/10 text-emerald-400 uppercase tracking-wider">Năng lực cốt lõi</span>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-white mt-3 mb-4">Kỹ năng chuyên môn & Bằng chứng thực tế</h2>
+        <p class="text-slate-400 text-sm sm:text-base">Mỗi kỹ năng đều được chứng minh qua các kết quả dự án và chỉ số định lượng cụ thể.</p>
+        <div class="w-16 h-1 bg-emerald-500 mx-auto rounded-full mt-4"></div>
+      </div>
+
+      <!-- Skills Cards Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        
+        <!-- Skill 1 -->
+        <div class="glass-card p-6 rounded-2xl flex flex-col justify-between transition-all duration-300 hover:-translate-y-1" data-aos="fade-up" data-aos-delay="100">
+          <div>
+            <div class="w-12 h-12 rounded-xl bg-emerald-500/10 text-emerald-400 flex items-center justify-center text-xl mb-4">
+              <i class="fa-solid fa-clipboard-check"></i>
+            </div>
+            <h3 class="text-lg font-bold text-white mb-2">Đánh giá hệ thống HACCP & ISO 22000</h3>
+            <p class="text-slate-300 text-sm mb-4 leading-relaxed">
+              Thiết kế checklist kiểm toán, xác định các điểm kiểm soát tới hạn (CCP/oPRP) và phân tích nguyên nhân gốc rễ (RCA - 5 Whys / Fishbone Diagram).
+            </p>
+          </div>
+          <div class="pt-4 border-t border-slate-800">
+            <span class="text-xs text-slate-400 uppercase tracking-wider font-semibold block mb-1">Kết quả chứng minh:</span>
+            <p class="text-xs text-emerald-300 font-medium">Giảm 35% lỗi Critical NC sau 6 tháng áp dụng bộ tiêu chí mới cho 15 cơ sở.</p>
+          </div>
+        </div>
+
+        <!-- Skill 2 -->
+        <div class="glass-card p-6 rounded-2xl flex flex-col justify-between transition-all duration-300 hover:-translate-y-1" data-aos="fade-up" data-aos-delay="200">
+          <div>
+            <div class="w-12 h-12 rounded-xl bg-teal-500/10 text-teal-400 flex items-center justify-center text-xl mb-4">
+              <i class="fa-solid fa-scale-balanced"></i>
+            </div>
+            <h3 class="text-lg font-bold text-white mb-2">Pháp chế thực phẩm & Tự công bố</h3>
+            <p class="text-slate-300 text-sm mb-4 leading-relaxed">
+              Nắm chắc Nghị định 15/2018/NĐ-CP, quy định ghi nhãn Nghị định 43/2017 & 111/2021, xây dựng hồ sơ Tiêu chuẩn cơ sở (TCCS) và kiểm nghiệm QCVN.
+            </p>
+          </div>
+          <div class="pt-4 border-t border-slate-800">
+            <span class="text-xs text-slate-400 uppercase tracking-wider font-semibold block mb-1">Kết quả chứng minh:</span>
+            <p class="text-xs text-teal-300 font-medium">100% hồ sơ sản phẩm tự công bố hợp chuẩn; 0 lỗi vi phạm khi tiếp đoàn kiểm tra liên ngành.</p>
+          </div>
+        </div>
+
+        <!-- Skill 3 -->
+        <div class="glass-card p-6 rounded-2xl flex flex-col justify-between transition-all duration-300 hover:-translate-y-1" data-aos="fade-up" data-aos-delay="300">
+          <div>
+            <div class="w-12 h-12 rounded-xl bg-cyan-500/10 text-cyan-400 flex items-center justify-center text-xl mb-4">
+              <i class="fa-solid fa-utensils"></i>
+            </div>
+            <h3 class="text-lg font-bold text-white mb-2">Kiểm soát quy trình SOP Vận hành F&B</h3>
+            <p class="text-slate-300 text-sm mb-4 leading-relaxed">
+              Thiết lập quy trình chuẩn tiếp nhận thực phẩm, kiểm soát chuỗi lạnh (Cold chain), quản lý hạn sử dụng FIFO/FEFO và lưu mẫu thức ăn 24h.
+            </p>
+          </div>
+          <div class="pt-4 border-t border-slate-800">
+            <span class="text-xs text-slate-400 uppercase tracking-wider font-semibold block mb-1">Kết quả chứng minh:</span>
+            <p class="text-xs text-cyan-300 font-medium">Duy trì tỷ lệ tuân thủ SOP tại điểm bán đạt 94.5% trên toàn hệ thống.</p>
+          </div>
+        </div>
+
+        <!-- Skill 4 -->
+        <div class="glass-card p-6 rounded-2xl flex flex-col justify-between transition-all duration-300 hover:-translate-y-1" data-aos="fade-up" data-aos-delay="100">
+          <div>
+            <div class="w-12 h-12 rounded-xl bg-indigo-500/10 text-indigo-400 flex items-center justify-center text-xl mb-4">
+              <i class="fa-solid fa-laptop-code"></i>
+            </div>
+            <h3 class="text-lg font-bold text-white mb-2">Số hóa báo cáo QA & Ứng dụng AI</h3>
+            <p class="text-slate-300 text-sm mb-4 leading-relaxed">
+              Thiết kế dashboard theo dõi CAPA trên Notion/Google Sheets, viết prompt AI xử lý dữ liệu kiểm toán và tổng hợp báo cáo lỗi phân tầng tự động.
+            </p>
+          </div>
+          <div class="pt-4 border-t border-slate-800">
+            <span class="text-xs text-slate-400 uppercase tracking-wider font-semibold block mb-1">Kết quả chứng minh:</span>
+            <p class="text-xs text-indigo-300 font-medium">Cắt giảm 5 giờ làm việc/tuần cho đội ngũ QA trong công tác lập biên bản & thống kê.</p>
+          </div>
+        </div>
+
+        <!-- Skill 5 -->
+        <div class="glass-card p-6 rounded-2xl flex flex-col justify-between transition-all duration-300 hover:-translate-y-1" data-aos="fade-up" data-aos-delay="200">
+          <div>
+            <div class="w-12 h-12 rounded-xl bg-amber-500/10 text-amber-400 flex items-center justify-center text-xl mb-4">
+              <i class="fa-solid fa-chalkboard-user"></i>
+            </div>
+            <h3 class="text-lg font-bold text-white mb-2">Đào tạo nhân sự & Quản trị rủi ro</h3>
+            <p class="text-slate-300 text-sm mb-4 leading-relaxed">
+              Thiết kế bài giảng trực quan bằng Canva, đứng lớp định kỳ hướng dẫn vệ sinh an toàn thực phẩm, xử lý sự cố vi sinh và khiếu nại khách hàng.
+            </p>
+          </div>
+          <div class="pt-4 border-t border-slate-800">
+            <span class="text-xs text-slate-400 uppercase tracking-wider font-semibold block mb-1">Kết quả chứng minh:</span>
+            <p class="text-xs text-amber-300 font-medium">100% nhân viên vận hành mới hoàn thành sát hạch an toàn thực phẩm trước khi nhận ca.</p>
+          </div>
+        </div>
+
+        <!-- Skill 6 -->
+        <div class="glass-card p-6 rounded-2xl flex flex-col justify-between transition-all duration-300 hover:-translate-y-1" data-aos="fade-up" data-aos-delay="300">
+          <div>
+            <div class="w-12 h-12 rounded-xl bg-rose-500/10 text-rose-400 flex items-center justify-center text-xl mb-4">
+              <i class="fa-solid fa-vial-virus"></i>
+            </div>
+            <h3 class="text-lg font-bold text-white mb-2">Quản lý kiểm nghiệm & Vi sinh thực phẩm</h3>
+            <p class="text-slate-300 text-sm mb-4 leading-relaxed">
+              Xây dựng ma trận lấy mẫu vi sinh (E. coli, Coliforms, Salmonella, S. aureus), đánh giá kết quả từ phòng lab được công nhận ISO 17025.
+            </p>
+          </div>
+          <div class="pt-4 border-t border-slate-800">
+            <span class="text-xs text-slate-400 uppercase tracking-wider font-semibold block mb-1">Kết quả chứng minh:</span>
+            <p class="text-xs text-rose-300 font-medium">Tối ưu hóa ngân sách kiểm nghiệm định kỳ, tiết kiệm 15% chi phí phân tích mẫu.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Projects Section -->
+  <section id="projects" class="py-20 bg-slate-900/60 border-t border-slate-800 relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Section Header -->
+      <div class="text-center max-w-3xl mx-auto mb-16" data-aos="fade-up">
+        <span class="px-3.5 py-1 rounded-full text-xs font-semibold bg-emerald-500/10 text-emerald-400 uppercase tracking-wider">Dự án trọng điểm</span>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-white mt-3 mb-4">Các dự án & Thành tựu tiêu biểu</h2>
+        <p class="text-slate-400 text-sm sm:text-base">Các giải pháp thực tiễn tạo ra sự thay đổi trực tiếp về điểm số tuân thủ và chi phí doanh nghiệp.</p>
+        <div class="w-16 h-1 bg-emerald-500 mx-auto rounded-full mt-4"></div>
+      </div>
+
+      <!-- Projects Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        
+        <!-- Project Card 1 -->
+        <div class="glass-card rounded-3xl overflow-hidden flex flex-col group transition-all duration-300 hover:shadow-2xl hover:shadow-emerald-950/50" data-aos="fade-up" data-aos-delay="100">
+          <div class="relative h-48 bg-gradient-to-br from-emerald-900/70 via-slate-800 to-slate-900 flex items-center justify-center p-6 border-b border-slate-800">
+            <div class="text-center">
+              <div class="w-16 h-16 mx-auto rounded-2xl bg-emerald-500/20 text-emerald-400 flex items-center justify-center text-3xl mb-2 group-hover:scale-110 transition-transform">
+                <i class="fa-solid fa-store"></i>
+              </div>
+              <span class="text-xs font-semibold text-emerald-300 uppercase tracking-wider">Hệ thống F&B</span>
+            </div>
+            <div class="absolute top-4 right-4 bg-slate-900/90 text-emerald-400 text-xs px-3 py-1 rounded-full border border-slate-700">
+              2025 – 2026
+            </div>
+          </div>
+          
+          <div class="p-6 flex-1 flex flex-col justify-between">
+            <div>
+              <h3 class="text-xl font-bold text-white mb-2 group-hover:text-emerald-400 transition-colors">
+                Nâng cao tỷ lệ tuân thủ SOP Chuỗi nhà hàng
+              </h3>
+              <p class="text-slate-400 text-sm mb-4 line-clamp-3">
+                Thiết lập lại bộ tiêu chuẩn kiểm toán an toàn thực phẩm tại chỗ, phân loại mức độ rủi ro (Minor, Major, Critical) và triển khai cẩm nang xử lý khủng hoảng.
+              </p>
+              <div class="flex flex-wrap gap-2 mb-6">
+                <span class="text-xs px-2.5 py-1 rounded-md bg-slate-800 text-slate-300">Lead QA Auditor</span>
+                <span class="text-xs px-2.5 py-1 rounded-md bg-emerald-500/10 text-emerald-400 font-medium">Giảm 35% Critical NC</span>
+              </div>
+            </div>
+            <button onclick="openProjectModal(1)" class="w-full py-2.5 px-4 rounded-xl bg-slate-800 hover:bg-emerald-600 text-slate-200 hover:text-white text-sm font-semibold transition-colors flex items-center justify-center gap-2">
+              <span>Xem chi tiết dự án</span>
+              <i class="fa-solid fa-arrow-right text-xs"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- Project Card 2 -->
+        <div class="glass-card rounded-3xl overflow-hidden flex flex-col group transition-all duration-300 hover:shadow-2xl hover:shadow-emerald-950/50" data-aos="fade-up" data-aos-delay="200">
+          <div class="relative h-48 bg-gradient-to-br from-teal-900/70 via-slate-800 to-slate-900 flex items-center justify-center p-6 border-b border-slate-800">
+            <div class="text-center">
+              <div class="w-16 h-16 mx-auto rounded-2xl bg-teal-500/20 text-teal-400 flex items-center justify-center text-3xl mb-2 group-hover:scale-110 transition-transform">
+                <i class="fa-solid fa-robot"></i>
+              </div>
+              <span class="text-xs font-semibold text-teal-300 uppercase tracking-wider">Số hóa & Tự động hóa</span>
+            </div>
+            <div class="absolute top-4 right-4 bg-slate-900/90 text-teal-400 text-xs px-3 py-1 rounded-full border border-slate-700">
+              2026
+            </div>
+          </div>
+          
+          <div class="p-6 flex-1 flex flex-col justify-between">
+            <div>
+              <h3 class="text-xl font-bold text-white mb-2 group-hover:text-teal-400 transition-colors">
+                Số hóa báo cáo kiểm toán & Dashboard CAR
+              </h3>
+              <p class="text-slate-400 text-sm mb-4 line-clamp-3">
+                Xây dựng hệ thống form số hóa ghi nhận biên bản kiểm toán theo thời gian thực và quản lý tiến độ thực hiện hành động khắc phục phòng ngừa tự động.
+              </p>
+              <div class="flex flex-wrap gap-2 mb-6">
+                <span class="text-xs px-2.5 py-1 rounded-md bg-slate-800 text-slate-300">Khởi xướng & Triển khai</span>
+                <span class="text-xs px-2.5 py-1 rounded-md bg-teal-500/10 text-teal-400 font-medium">Tiết kiệm 5h/tuần</span>
+              </div>
+            </div>
+            <button onclick="openProjectModal(2)" class="w-full py-2.5 px-4 rounded-xl bg-slate-800 hover:bg-teal-600 text-slate-200 hover:text-white text-sm font-semibold transition-colors flex items-center justify-center gap-2">
+              <span>Xem chi tiết dự án</span>
+              <i class="fa-solid fa-arrow-right text-xs"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- Project Card 3 -->
+        <div class="glass-card rounded-3xl overflow-hidden flex flex-col group transition-all duration-300 hover:shadow-2xl hover:shadow-emerald-950/50" data-aos="fade-up" data-aos-delay="300">
+          <div class="relative h-48 bg-gradient-to-br from-cyan-900/70 via-slate-800 to-slate-900 flex items-center justify-center p-6 border-b border-slate-800">
+            <div class="text-center">
+              <div class="w-16 h-16 mx-auto rounded-2xl bg-cyan-500/20 text-cyan-400 flex items-center justify-center text-3xl mb-2 group-hover:scale-110 transition-transform">
+                <i class="fa-solid fa-box-archive"></i>
+              </div>
+              <span class="text-xs font-semibold text-cyan-300 uppercase tracking-wider">Pháp chế Kỹ thuật</span>
+            </div>
+            <div class="absolute top-4 right-4 bg-slate-900/90 text-cyan-400 text-xs px-3 py-1 rounded-full border border-slate-700">
+              2026
+            </div>
+          </div>
+          
+          <div class="p-6 flex-1 flex flex-col justify-between">
+            <div>
+              <h3 class="text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors">
+                Hồ sơ tự công bố sản phẩm & Tối ưu Test Lab
+              </h3>
+              <p class="text-slate-400 text-sm mb-4 line-clamp-3">
+                Rà soát thành phần sản phẩm bao gói sẵn, tính toán nhãn dinh dưỡng, chuẩn hóa hồ sơ TCCS và thương lượng gói kiểm nghiệm định kỳ ưu đãi.
+              </p>
+              <div class="flex flex-wrap gap-2 mb-6">
+                <span class="text-xs px-2.5 py-1 rounded-md bg-slate-800 text-slate-300">Phụ trách Pháp chế</span>
+                <span class="text-xs px-2.5 py-1 rounded-md bg-cyan-500/10 text-cyan-400 font-medium">Tiết kiệm 15% phí Lab</span>
+              </div>
+            </div>
+            <button onclick="openProjectModal(3)" class="w-full py-2.5 px-4 rounded-xl bg-slate-800 hover:bg-cyan-600 text-slate-200 hover:text-white text-sm font-semibold transition-colors flex items-center justify-center gap-2">
+              <span>Xem chi tiết dự án</span>
+              <i class="fa-solid fa-arrow-right text-xs"></i>
+            </button>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Certifications Sub-block -->
+      <div class="mt-16 pt-12 border-t border-slate-800" data-aos="fade-up">
+        <h3 class="text-xl font-bold text-white text-center mb-8 flex items-center justify-center gap-2">
+          <i class="fa-solid fa-award text-emerald-400"></i> Chứng chỉ & Thành tích Chuyên môn
+        </h3>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+          <div class="p-4 rounded-2xl bg-slate-900 border border-slate-800 flex items-center gap-3">
+            <i class="fa-solid fa-certificate text-emerald-400 text-2xl"></i>
+            <div>
+              <p class="text-sm font-semibold text-white">Đánh giá viên nội bộ</p>
+              <p class="text-xs text-slate-400">HACCP & ISO 22000:2018</p>
+            </div>
+          </div>
+          <div class="p-4 rounded-2xl bg-slate-900 border border-slate-800 flex items-center gap-3">
+            <i class="fa-solid fa-certificate text-teal-400 text-2xl"></i>
+            <div>
+              <p class="text-sm font-semibold text-white">Nhận thức FSSC 22000</p>
+              <p class="text-xs text-slate-400">Version 6.0 Standard</p>
+            </div>
+          </div>
+          <div class="p-4 rounded-2xl bg-slate-900 border border-slate-800 flex items-center gap-3">
+            <i class="fa-solid fa-graduation-cap text-cyan-400 text-2xl"></i>
+            <div>
+              <p class="text-sm font-semibold text-white">Cử nhân CN Thực Phẩm</p>
+              <p class="text-xs text-slate-400">Food Quality Assurance</p>
+            </div>
+          </div>
+          <div class="p-4 rounded-2xl bg-slate-900 border border-slate-800 flex items-center gap-3">
+            <i class="fa-solid fa-trophy text-amber-400 text-2xl"></i>
+            <div>
+              <p class="text-sm font-semibold text-white">Sáng kiến Xuất sắc 2025</p>
+              <p class="text-xs text-slate-400">Khen thưởng Quản trị Rủi ro</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section id="testimonials" class="py-20 relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto mb-16" data-aos="fade-up">
+        <span class="px-3.5 py-1 rounded-full text-xs font-semibold bg-emerald-500/10 text-emerald-400 uppercase tracking-wider">Độ tin cậy</span>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-white mt-3 mb-4">Phản hồi từ Quản lý & Đối tác</h2>
+        <div class="w-16 h-1 bg-emerald-500 mx-auto rounded-full"></div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        
+        <!-- Feedback 1 -->
+        <div class="glass-card p-8 rounded-3xl relative" data-aos="fade-right">
+          <i class="fa-solid fa-quote-left text-3xl text-emerald-500/30 absolute top-6 right-6"></i>
+          <p class="text-slate-300 italic mb-6 leading-relaxed">
+            "Thống có tư duy xử lý vấn đề rất logic và quyết liệt. Các biên bản kiểm toán của bạn không chỉ dừng lại ở việc chỉ ra lỗi sai, mà luôn đi kèm giải pháp khắc phục thực tế, khả thi với nhịp độ vận hành bận rộn của nhà hàng."
+          </p>
+          <div class="flex items-center gap-3">
+            <div class="w-11 h-11 rounded-full bg-emerald-600/20 text-emerald-400 flex items-center justify-center font-bold">
+              AC
+            </div>
+            <div>
+              <h4 class="text-white font-bold text-sm">Quản lý Vận hành Khu vực (Area Coach)</h4>
+              <p class="text-xs text-slate-400">Chuỗi Nhà hàng F&B</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Feedback 2 -->
+        <div class="glass-card p-8 rounded-3xl relative" data-aos="fade-left">
+          <i class="fa-solid fa-quote-left text-3xl text-emerald-500/30 absolute top-6 right-6"></i>
+          <p class="text-slate-300 italic mb-6 leading-relaxed">
+            "Tác phong làm việc chuẩn mực, nắm rất chắc các tiêu chuẩn luật định và tiêu chuẩn chuỗi. Bạn luôn chuẩn bị tài liệu kỹ lưỡng, rõ ràng giúp các đợt thanh kiểm tra của cơ quan quản lý diễn ra suôn sẻ, không phát sinh sai sót."
+          </p>
+          <div class="flex items-center gap-3">
+            <div class="w-11 h-11 rounded-full bg-teal-600/20 text-teal-400 flex items-center justify-center font-bold">
+              QM
+            </div>
+            <div>
+              <h4 class="text-white font-bold text-sm">Trưởng phòng Đảm bảo Chất lượng (QA Manager)</h4>
+              <p class="text-xs text-slate-400">Doanh nghiệp Thực phẩm</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact & Footer Section -->
+  <section id="contact" class="py-20 bg-slate-900 border-t border-slate-800 relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto mb-16" data-aos="fade-up">
+        <span class="px-3.5 py-1 rounded-full text-xs font-semibold bg-emerald-500/10 text-emerald-400 uppercase tracking-wider">Thông tin liên lạc</span>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-white mt-3 mb-4">Kết nối trao đổi công việc</h2>
+        <p class="text-slate-400 text-sm sm:text-base">Tôi luôn sẵn lòng trao đổi về các cơ hội hợp tác và dự án quản lý chất lượng thực phẩm.</p>
+        <div class="w-16 h-1 bg-emerald-500 mx-auto rounded-full mt-4"></div>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10">
+        
+        <!-- Contact Information Info Cards -->
+        <div class="lg:col-span-5 space-y-4" data-aos="fade-right">
+          <div class="glass-card p-6 rounded-2xl flex items-start gap-4">
+            <div class="w-12 h-12 rounded-xl bg-emerald-500/10 text-emerald-400 flex items-center justify-center text-xl shrink-0">
+              <i class="fa-regular fa-envelope"></i>
+            </div>
+            <div class="flex-1">
+              <span class="text-xs font-medium text-slate-400 uppercase">Hộp thư điện tử</span>
+              <p class="text-white font-semibold text-base break-all" id="my-email">thong.foodqa@gmail.com</p>
+              <button onclick="copyEmailToClipboard()" class="text-xs text-emerald-400 hover:text-emerald-300 mt-1 inline-flex items-center gap-1">
+                <i class="fa-regular fa-copy"></i> Sao chép địa chỉ email
+              </button>
+            </div>
+          </div>
+
+          <div class="glass-card p-6 rounded-2xl flex items-start gap-4">
+            <div class="w-12 h-12 rounded-xl bg-emerald-500/10 text-emerald-400 flex items-center justify-center text-xl shrink-0">
+              <i class="fa-solid fa-phone"></i>
+            </div>
+            <div>
+              <span class="text-xs font-medium text-slate-400 uppercase">Điện thoại / Zalo</span>
+              <p class="text-white font-semibold text-base">+84 (0) 9xx xxx xxx</p>
+              <span class="text-xs text-slate-400">Hỗ trợ giờ hành chính</span>
+            </div>
+          </div>
+
+          <div class="glass-card p-6 rounded-2xl flex items-start gap-4">
+            <div class="w-12 h-12 rounded-xl bg-emerald-500/10 text-emerald-400 flex items-center justify-center text-xl shrink-0">
+              <i class="fa-brands fa-linkedin-in"></i>
+            </div>
+            <div>
+              <span class="text-xs font-medium text-slate-400 uppercase">Hồ sơ mạng xã hội nghề nghiệp</span>
+              <p class="text-white font-semibold text-base">linkedin.com/in/vuvanthong</p>
+              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="text-xs text-emerald-400 hover:text-emerald-300 mt-1 inline-flex items-center gap-1">
+                Mở liên kết <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+              </a>
+            </div>
+          </div>
+
+          <div class="p-6 rounded-2xl bg-gradient-to-r from-emerald-950/60 to-slate-900 border border-emerald-500/20">
+            <h4 class="text-sm font-semibold text-emerald-300 mb-1 flex items-center gap-2">
+              <i class="fa-solid fa-circle-check"></i> Lưu ý tuyển dụng
+            </h4>
+            <p class="text-xs text-slate-400 leading-relaxed">
+              Tôi có thể nhanh chóng bắt đầu công việc tại các doanh nghiệp chế biến thực phẩm, nhà máy sản xuất hoặc chuỗi F&B tại khu vực Hà Nội và lân cận.
+            </p>
+          </div>
+        </div>
+
+        <!-- Contact Form Card -->
+        <div class="lg:col-span-7 glass-card p-8 rounded-3xl" data-aos="fade-left">
+          <form id="contact-form" onsubmit="handleFormSubmit(event)" class="space-y-5">
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+              <div>
+                <label for="name" class="block text-xs font-semibold text-slate-300 uppercase tracking-wider mb-2">Họ và tên của bạn</label>
+                <input type="text" id="name" required placeholder="Ví dụ: Nguyễn Văn A" class="w-full px-4 py-3 rounded-xl bg-slate-950 border border-slate-700 text-white placeholder-slate-500 focus:outline-none focus:border-emerald-500 focus:ring-1 focus:ring-emerald-500 transition-colors text-sm">
+              </div>
+              <div>
+                <label for="company" class="block text-xs font-semibold text-slate-300 uppercase tracking-wider mb-2">Doanh nghiệp / Tổ chức</label>
+                <input type="text" id="company" placeholder="Ví dụ: F&B Group" class="w-full px-4 py-3 rounded-xl bg-slate-950 border border-slate-700 text-white placeholder-slate-500 focus:outline-none focus:border-emerald-500 focus:ring-1 focus:ring-emerald-500 transition-colors text-sm">
+              </div>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+              <div>
+                <label for="email" class="block text-xs font-semibold text-slate-300 uppercase tracking-wider mb-2">Địa chỉ Email</label>
+                <input type="email" id="email" required placeholder="name@company.com" class="w-full px-4 py-3 rounded-xl bg-slate-950 border border-slate-700 text-white placeholder-slate-500 focus:outline-none focus:border-emerald-500 focus:ring-1 focus:ring-emerald-500 transition-colors text-sm">
+              </div>
+              <div>
+                <label for="subject" class="block text-xs font-semibold text-slate-300 uppercase tracking-wider mb-2">Chủ đề quan tâm</label>
+                <select id="subject" class="w-full px-4 py-3 rounded-xl bg-slate-950 border border-slate-700 text-white focus:outline-none focus:border-emerald-500 focus:ring-1 focus:ring-emerald-500 transition-colors text-sm">
+                  <option value="recruitment">Cơ hội việc làm QA / Kiểm soát chất lượng</option>
+                  <option value="consulting">Tư vấn quy trình TCCS & Đánh giá an toàn</option>
+                  <option value="audit">Kiểm toán vệ sinh chuỗi F&B</option>
+                  <option value="other">Trao đổi chuyên môn khác</option>
+                </select>
+              </div>
+            </div>
+
+            <div>
+              <label for="message" class="block text-xs font-semibold text-slate-300 uppercase tracking-wider mb-2">Nội dung tin nhắn</label>
+              <textarea id="message" rows="4" required placeholder="Mô tả vị trí công việc, yêu cầu hoặc dự án bạn muốn trao đổi..." class="w-full px-4 py-3 rounded-xl bg-slate-950 border border-slate-700 text-white placeholder-slate-500 focus:outline-none focus:border-emerald-500 focus:ring-1 focus:ring-emerald-500 transition-colors text-sm"></textarea>
+            </div>
+
+            <button type="submit" id="submit-btn" class="w-full py-3.5 px-6 rounded-xl bg-gradient-to-r from-brand-600 to-emerald-500 hover:from-brand-500 hover:to-emerald-400 text-white font-semibold shadow-lg shadow-brand-600/30 transition-all duration-300 flex items-center justify-center gap-2">
+              <i class="fa-regular fa-paper-plane"></i>
+              <span>Gửi thông điệp liên hệ</span>
+            </button>
+          </form>
+        </div>
+
+      </div>
+
+      <!-- Footer Bottom Bar -->
+      <footer class="mt-20 pt-8 border-t border-slate-800 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500">
+        <p>© 2026 Vũ Văn Thống. Tất cả quyền được bảo lưu. Food QA Specialist Portfolio.</p>
+        <div class="flex items-center space-x-6">
+          <a href="#hero" class="hover:text-emerald-400 transition-colors">Đầu trang</a>
+          <a href="#about" class="hover:text-emerald-400 transition-colors">Về tôi</a>
+          <a href="#projects" class="hover:text-emerald-400 transition-colors">Dự án</a>
+          <a href="#contact" class="hover:text-emerald-400 transition-colors">Liên hệ</a>
+        </div>
+      </footer>
+
+    </div>
+  </section>
+
+  <!-- Project Detail Modal -->
+  <div id="project-modal" class="fixed inset-0 z-50 hidden flex items-center justify-center p-4 bg-slate-950/80 backdrop-blur-md">
+    <div class="relative w-full max-w-2xl bg-slate-900 border border-slate-700 rounded-3xl p-6 sm:p-8 shadow-2xl overflow-y-auto max-h-[90vh]">
+      
+      <!-- Close Button -->
+      <button onclick="closeProjectModal()" class="absolute top-5 right-5 w-9 h-9 rounded-full bg-slate-800 text-slate-400 hover:text-white flex items-center justify-center focus:outline-none transition-colors">
+        <i class="fa-solid fa-xmark text-lg"></i>
+      </button>
+
+      <div id="modal-content">
+        <!-- Dynamic injected via JS -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification Box -->
+  <div id="toast-msg" class="fixed bottom-6 right-6 z-50 transform translate-y-24 opacity-0 transition-all duration-300 pointer-events-none flex items-center gap-3 px-5 py-3.5 rounded-2xl bg-slate-800 border border-emerald-500/50 shadow-2xl text-white text-sm">
+    <div class="w-7 h-7 rounded-lg bg-emerald-500/20 text-emerald-400 flex items-center justify-center text-sm shrink-0">
+      <i class="fa-solid fa-check"></i>
+    </div>
+    <span id="toast-text" class="font-medium">Thao tác thành công!</span>
+  </div>
+
+  <!-- External Script: AOS Animation Library -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+
+  <script>
+    // 1. Initialize AOS Animations
+    document.addEventListener('DOMContentLoaded', () => {
+      AOS.init({
+        once: true,
+        duration: 800,
+        easing: 'ease-out-cubic',
+        offset: 80
+      });
+      initTypingEffect();
+    });
+
+    // 2. Dynamic Typing Effect Logic
+    const jobTitles = [
+      "Chuyên viên Đảm bảo Chất lượng Thực phẩm",
+      "Đánh giá viên HACCP & ISO 22000",
+      "Chuyên viên Pháp chế An toàn Thực phẩm & TCCS",
+      "Tiên phong Số hóa Kiểm toán QA bằng AI"
+    ];
+    let titleIndex = 0;
+    let charIndex = 0;
+    let isDeleting = false;
+    const typingElement = document.getElementById('typing-text');
+
+    function initTypingEffect() {
+      if (!typingElement) return;
+      const currentTitle = jobTitles[titleIndex];
+      
+      if (isDeleting) {
+        typingElement.textContent = currentTitle.substring(0, charIndex - 1);
+        charIndex--;
+      } else {
+        typingElement.textContent = currentTitle.substring(0, charIndex + 1);
+        charIndex++;
+      }
+
+      let typingSpeed = isDeleting ? 35 : 70;
+
+      if (!isDeleting && charIndex === currentTitle.length) {
+        typingSpeed = 1800; // Pause after typing
+        isDeleting = true;
+      } else if (isDeleting && charIndex === 0) {
+        isDeleting = false;
+        titleIndex = (titleIndex + 1) % jobTitles.length;
+        typingSpeed = 400; // Pause before next word
+      }
+
+      setTimeout(initTypingEffect, typingSpeed);
+    }
+
+    // 3. Mobile Hamburger Menu Toggle
+    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const menuIcon = document.getElementById('menu-icon');
+
+    mobileMenuBtn.addEventListener('click', () => {
+      const isExpanded = !mobileMenu.classList.contains('hidden');
+      if (isExpanded) {
+        mobileMenu.classList.add('hidden');
+        menuIcon.className = 'fa-solid fa-bars text-xl';
+      } else {
+        mobileMenu.classList.remove('hidden');
+        menuIcon.className = 'fa-solid fa-xmark text-xl';
+      }
+    });
+
+    // Close mobile menu on clicking any link
+    document.querySelectorAll('.mobile-nav-link').forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden');
+        menuIcon.className = 'fa-solid fa-bars text-xl';
+      });
+    });
+
+    // 4. Modal Data and Handlers
+    const projectDetails = {
+      1: {
+        title: "Nâng cao tỷ lệ tuân thủ SOP Chuỗi nhà hàng",
+        period: "2025 – 2026",
+        role: "Trưởng nhóm đánh giá chất lượng (Lead QA Auditor)",
+        objective: "Chuẩn hóa quy trình vận hành an toàn thực phẩm tại 15 cơ sở nhà hàng và kiểm soát rủi ro ngộ độc.",
+        keyResults: [
+          "Giảm 35% số lượng điểm không phù hợp nghiêm trọng (Critical NC) sau 6 tháng ban hành tiêu chuẩn kiểm toán mới.",
+          "Nâng tỷ lệ tuân thủ SOP trung bình toàn hệ thống từ 82% lên 94.5%.",
+          "Biên soạn sổ tay hành động nhanh ứng phó sự cố chất lượng cho toàn bộ Cửa hàng trưởng và Bếp trưởng."
+        ],
+        tags: ["HACCP", "Audit F&B", "Quản trị rủi ro", "Đào tạo nhân viên"]
+      },
+      2: {
+        title: "Tự động hóa hệ thống báo cáo kiểm toán chất lượng nội bộ",
+        period: "2026",
+        role: "Người khởi xướng & Triển khai",
+        objective: "Loại bỏ thao tác tổng hợp dữ liệu thủ công, số hóa biên bản kiểm tra tức thì tại hiện trường.",
+        keyResults: [
+          "Tiết kiệm 5 giờ làm việc/tuần cho đội ngũ QA trong khâu trích xuất số liệu và lập báo cáo tổng hợp gửi Ban Giám đốc.",
+          "Chuẩn hóa mô hình CAPA (Hành động khắc phục và phòng ngừa), tự động nhắc hạn chót (deadline) cho quản lý cơ sở.",
+          "Phân tầng biểu đồ xu hướng lỗi vi sinh và nhiệt độ kho lạnh một cách trực quan trên Dashboard."
+        ],
+        tags: ["Số hóa QA", "Notion / Google AppSheet", "AI Prompts", "Tối ưu quy trình"]
+      },
+      3: {
+        title: "Rà soát hồ sơ tự công bố sản phẩm & Tối ưu Test Lab",
+        period: "2026",
+        role: "Chuyên viên phụ trách pháp chế kỹ thuật",
+        objective: "Đảm bảo tính hợp pháp 100% cho các sản phẩm thực phẩm bao gói sẵn và tối ưu hóa ngân sách kiểm nghiệm.",
+        keyResults: [
+          "Hoàn thành 100% hồ sơ rà soát chỉ tiêu an toàn và nhãn hàng hóa theo Nghị định 15/2018/NĐ-CP và Nghị định 43/2017/NĐ-CP.",
+          "0 phát sinh lỗi vi phạm hành chính trong mọi đợt thanh kiểm tra liên ngành an toàn thực phẩm.",
+          "Tái đàm phán ma trận kiểm nghiệm với phòng lab ISO 17025, giúp tiết kiệm 15% tổng chi phí phân tích định kỳ hàng năm."
+        ],
+        tags: ["Nghị định 15/2018/NĐ-CP", "TCCS", "Kiểm nghiệm QCVN", "Tiết kiệm chi phí"]
+      }
+    };
+
+    function openProjectModal(id) {
+      const data = projectDetails[id];
+      if (!data) return;
+
+      const content = document.getElementById('modal-content');
+      content.innerHTML = `
+        <div class="mb-4">
+          <span class="text-xs font-semibold px-2.5 py-1 rounded-full bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">${data.period}</span>
+          <h3 class="text-2xl font-bold text-white mt-3">${data.title}</h3>
+          <p class="text-emerald-400 text-sm font-medium mt-1"><i class="fa-solid fa-user-gear mr-1"></i> Vai trò: ${data.role}</p>
+        </div>
+        
+        <div class="space-y-4 my-6 text-sm text-slate-300">
+          <div>
+            <h4 class="text-xs font-bold text-slate-400 uppercase tracking-wider mb-1">Mục tiêu dự án:</h4>
+            <p class="leading-relaxed bg-slate-950/60 p-3 rounded-xl border border-slate-800">${data.objective}</p>
+          </div>
+
+          <div>
+            <h4 class="text-xs font-bold text-slate-400 uppercase tracking-wider mb-2">Kết quả định lượng đạt được:</h4>
+            <ul class="space-y-2">
+              ${data.keyResults.map(item => `
+                <li class="flex items-start gap-2">
+                  <i class="fa-solid fa-circle-check text-emerald-400 text-sm mt-0.5 shrink-0"></i>
+                  <span>${item}</span>
+                </li>
+              `).join('')}
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="text-xs font-bold text-slate-400 uppercase tracking-wider mb-2">Công nghệ & Nghiệp vụ áp dụng:</h4>
+            <div class="flex flex-wrap gap-2">
+              ${data.tags.map(t => `<span class="px-2.5 py-1 text-xs rounded-lg bg-slate-800 text-slate-300 font-medium">${t}</span>`).join('')}
+            </div>
+          </div>
+        </div>
+
+        <div class="pt-4 border-t border-slate-800 flex justify-end">
+          <button onclick="closeProjectModal()" class="px-5 py-2.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 text-sm font-medium transition-colors">
+            Đóng cửa sổ
+          </button>
+        </div>
+      `;
+
+      document.getElementById('project-modal').classList.remove('hidden');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeProjectModal() {
+      document.getElementById('project-modal').classList.add('hidden');
+      document.body.style.overflow = 'auto';
+    }
+
+    // Close modal if clicked outside
+    window.addEventListener('click', (e) => {
+      const modal = document.getElementById('project-modal');
+      if (e.target === modal) {
+        closeProjectModal();
+      }
+    });
+
+    // 5. Toast Notification System
+    function showToast(message) {
+      const toast = document.getElementById('toast-msg');
+      const text = document.getElementById('toast-text');
+      text.textContent = message;
+      toast.classList.remove('opacity-0', 'translate-y-24');
+      toast.classList.add('opacity-100', 'translate-y-0');
+      
+      setTimeout(() => {
+        toast.classList.remove('opacity-100', 'translate-y-0');
+        toast.classList.add('opacity-0', 'translate-y-24');
+      }, 3500);
+    }
+
+    // 6. Copy Email to Clipboard helper
+    function copyEmailToClipboard() {
+      const emailText = "thong.foodqa@gmail.com";
+      const dummy = document.createElement("textarea");
+      document.body.appendChild(dummy);
+      dummy.value = emailText;
+      dummy.select();
+      try {
+        document.execCommand('copy');
+        showToast("Đã sao chép email: " + emailText);
+      } catch (err) {
+        showToast("Không thể sao chép tự động!");
+      }
+      document.body.removeChild(dummy);
+    }
+
+    // 7. Interactive Form Submission
+    function handleFormSubmit(event) {
+      event.preventDefault();
+      const submitBtn = document.getElementById('submit-btn');
+      const originalText = submitBtn.innerHTML;
+      
+      submitBtn.disabled = true;
+      submitBtn.innerHTML = `<i class="fa-solid fa-spinner fa-spin mr-2"></i> Đang gửi thông điệp...`;
+
+      setTimeout(() => {
+        submitBtn.disabled = false;
+        submitBtn.innerHTML = originalText;
+        showToast("Cảm ơn bạn! Thông điệp liên hệ đã được ghi nhận.");
+        document.getElementById('contact-form').reset();
+      }, 1000);
+    }
+  </script>
+</body>
+</html>
